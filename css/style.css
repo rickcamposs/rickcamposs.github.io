@@ -18,11 +18,11 @@
    ========================================================= */
 
 @import url('./modules/_base.css');
-@import url('./modules/_theme.css');
-@import url('./modules/_intro-cursor.css');
-@import url('./modules/_nav.css');
-@import url('./modules/_hero.css');
-@import url('./modules/_about-skills.css');
-@import url('./modules/_rows.css');
-@import url('./modules/_projects.css');
-@import url('./modules/_ui.css');
+@import url('./modules/theme.css');
+@import url('./modules/intro-cursor.css');
+@import url('./modules/nav.css');
+@import url('./modules/hero.css');
+@import url('./modules/about-skills.css');
+@import url('./modules/rows.css');
+@import url('./modules/projects.css');
+@import url('./modules/ui.css');
