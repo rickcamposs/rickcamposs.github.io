@@ -17,7 +17,7 @@
        └── _ui.css            contact, footer, scroll progress, back-to-top
    ========================================================= */
 
-@import url('./modules/_base.css');
+@import url('./modules/base.css');
 @import url('./modules/theme.css');
 @import url('./modules/intro-cursor.css');
 @import url('./modules/nav.css');
