@@ -1,0 +1,41 @@
+[data-theme="light"] {
+  --bg: #f5f6fa;
+  --bg-alt: #ececf3;
+  --border: #d7d9e3;
+  --fg: #282a36;
+  --comment: #586089;
+  --purple: #7c4dd9;
+  --pink: #c2255c;
+  --green: #1c8a4b;
+  --cyan: #0f7d97;
+  --orange: #b5650a;
+  --yellow: #8a7000;
+  --red: #d6336c;
+}
+
+[data-theme="light"] ::selection {
+  color: var(--bg);
+}
+
+[data-theme="light"] header.nav {
+  background: rgba(245, 246, 250, 0.86);
+}
+
+[data-theme="light"] .identity-badge .avatar::after {
+  background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.55), transparent 55%);
+}
+
+.theme-toggle {
+  font-family: var(--mono);
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--fg);
+  padding: 6px 10px;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}

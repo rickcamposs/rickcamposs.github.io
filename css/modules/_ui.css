@@ -1,0 +1,68 @@
+.contact-note {
+  color: var(--comment);
+  max-width: 520px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px var(--pad);
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--comment);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer a:hover {
+  color: var(--pink);
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple), var(--pink), var(--cyan));
+  z-index: 200;
+  transition: width .1s linear;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--fg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, border-color .25s ease, color .25s ease, transform .25s ease;
+  z-index: 150;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  transform: translateY(-3px);
+}

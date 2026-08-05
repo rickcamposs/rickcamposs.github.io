@@ -1,205 +1,243 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-lang="pt">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="refactor.css">
-        <link rel="icon" href="./assets/favicon.png" type="img/png">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rc_theme');
+        if (!t) { t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; }
+        if (t === 'light') { document.documentElement.setAttribute('data-theme', 'light'); }
+        var l = localStorage.getItem('rc_lang');
+        if (l === 'en') { document.documentElement.setAttribute('data-lang', 'en'); }
+      } catch (e) { }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riquelme Campos — FullStack Developer</title>
+  <meta name="description" content="Portfolio of Riquelme Campos, FullStack developer and Information Systems student at UFVJM.">
 
-    <body>
-        <main>
-            <div class="container">
-                <div class="card profile">
-                    <img class="photo" src="./assets/Group 1.png"
-                        alt="Foto de Riquelme, sorrindo, com óculos de sol, em uma lagoa">
-                    <div class="text-name">
-                        Riquelme Campos
-                    </div>
-                    <div class="position">
-                        Desenvolvedor
-                        <span class="green">
-                            FullStack
-                        </span>
-                    </div>
-                    <div id="progress-bar">
-                        <div id="progress">
-                        </div>
-                    </div>
-                    <div class="to-emerge">
-                        Sistemas de Informação <br>
-                        <span class="text-bold">
-                            Março 2023 – Dezembro 2027
-                        </span>
-                    </div>
-                </div>
-                <div class="card about">
-                    <div class="text-title">
-                        SOBRE MIM
-                    </div>
-                    <span class="text-about">
-                        <span class="text-about">
-                            Atualmente, curso Sistemas de Informação pela
-                            <span class="green">
-                                Universidade Federal dos Vales do Jequitinhonha e Mucuri
-                            </span>
-                            (UFVJM),
-                            <span class="text-adaptavel">
-                                onde venho ampliando meus conhecimentos em desenvolvimento de software, banco de dados e soluções web. 
-                            </span>
-                            Sou formado como
-                            <span class="green">
-                                Técnico em Informática
-                            </span>
-                            pelo
-                            <span class="green">
-                                Instituto Federal do Norte de Minas Gerais (IFNMG).
-                            </span>
-                            <span class="text-adaptavel">
-                                Tenho grande interesse por tecnologia e, no momento, me dedico a
-                            </span>
-                            <span class="green text-adaptavel">
-                                projetos autorais
-                            </span>
-                            <span class="text-adaptavel">
-                                para colocar em prática o que aprendo e seguir evoluindo na área.
-                            </span>
-                        </span>
-                    </span>
-                </div>
-                <div class="card language">
-                    <div class="text-title">
-                        LINGUAGENS
-                    </div>
-                    <section class="section">
-                        <div class="no-copy button language">
-                            <ion-icon name="logo-html5">
-                            </ion-icon>
-                            <span>
-                                HTML
-                            </span>
-                        </div>
-                        <div class="no-copy button language">
-                            <ion-icon name="logo-css3">
-                            </ion-icon>
-                            <span>
-                                CSS
-                            </span>
-                        </div>
-                        <div class="no-copy button language">
-                            <ion-icon name="logo-python">
-                            </ion-icon>
-                            <span>
-                                Python
-                            </span>
-                        </div>
-                        <div class="no-copy button language">
-                            <ion-icon name="cafe-outline">
-                            </ion-icon>
-                            <span>
-                                Java
-                            </span>
-                        </div>
-                        <div class="no-copy button language">
-                            <ion-icon name="copy-outline">
-                            </ion-icon>
-                            <span>
-                                SQL
-                            </span>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card contato">
-                    <div class="text-title">
-                        CONTATO
-                    </div>
-                    <section class="section">
-                        <div class="no-copy button contato">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                            <a href="https://www.linkedin.com/in/riquelme-campos-3851a3278/" target="_blank">
-                                LinkedIn
-                            </a>
-                        </div>
-                        <div class="no-copy button contato">
-                            <ion-icon name="logo-github"></ion-icon>
-                            <a href="https://github.com/rickcamposs" target="_blank">
-                                GitHub
-                            </a>
-                        </div>
-                        <div class="no-copy button contato">
-                            <ion-icon name="mail-outline"></ion-icon>
-                            <a href="mailto:riquelmemoreiracampos@gmail.com" target="_blank">
-                                Email
-                            </a>
-                        </div>
-                        <div class="no-copy button contato">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                            <a href="https://www.instagram.com/rick_camposs_/" target="_blank">
-                                Instagram
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <div class="card projetos">
-                    <div class="text-title">
-                        PROJETOS
-                    </div>
-                    <section class="section">
-                        <div class="no-copy button no-absolute-icon">
-                            <ion-icon name="construct-outline"></ion-icon>
-                            <a href="https://github.com/rickcamposs/SistemaOficinaPOO" target="_blank">
-                                Sistema Oficina <span class="text-adaptavel">Mecânica</span>
-                            </a>
-                        </div>
-                        <div class="no-copy button no-absolute-icon">
-                            <ion-icon name="folder-outline"></ion-icon>
-                            <a href="https://github.com/rickcamposs/Portfolio" target="_blank">
-                                Portfólio Pessoal <span class="text-adaptavel">(Site)</span>
-                            </a>
-                        </div>
-                        <div class="no-copy button no-absolute-icon">
-                            <ion-icon name="image-outline"></ion-icon>
-                            <a href="https://www.behance.net/riquelmecampos" target="_blank">
-                                Photoshop Work's
-                            </a>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card experiencia">
-                    <div class="text-title">
-                        EXPERIÊNCIA
-                    </div>
-                    <div class="no-copy">
-                        <div class="icon-experience">
-                            <div id="experience">
-                                <ion-icon name="cloud-outline">
-                                </ion-icon>
-                            </div>
-                            <span class="text-width">
-                                <strong>
-                                    <a class="text-stay" href="https://lp.staycloud.com.br/" target="_blank">
-                                        StayCloud
-                                    </a>
-                                </strong>
-                                – Suporte Técnico
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="light-text">
-                ©2025
-            </footer>
-        </main>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    </body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="intro" id="intro" aria-hidden="true">
+    <p class="intro-welcome"><span id="introText"></span><span class="intro-cursor">▌</span></p>
+  </div>
+
+  <aside class="social-bar" aria-label="Redes sociais">
+    <a href="https://www.linkedin.com/in/riquelme-campos-3851a3278/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://github.com/rickcamposs" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+    </a>
+    <a href="mailto:riquelmemoreiracampos@gmail.com" aria-label="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+    <a href="https://www.instagram.com/rick_camposs_/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <span class="social-bar-line"></span>
+  </aside>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html#top" class="nav-mark" id="navMark">
+        <span class="nav-mark-short">RC_</span>
+        <span class="nav-mark-full">
+          <span class="nav-mark-name">Riquelme Campos</span>
+          <span class="nav-mark-role" data-pt="Desenvolvedor FullStack" data-en="FullStack Developer">Desenvolvedor FullStack</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">menu</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#top" class="active" data-pt="início" data-en="home">início</a>
+        <a href="index.html#sobre" data-pt="sobre" data-en="about">sobre</a>
+        <a href="index.html#atualmente" data-pt="atualmente" data-en="currently">atualmente</a>
+        <a href="projetos.html" data-pt="projetos" data-en="projects">projetos</a>
+        <a href="experiencia.html" data-pt="experiência" data-en="experience">experiência</a>
+        <a href="contato.html" data-pt="contato" data-en="contact">contato</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" data-pt="tema" data-en="theme">tema</button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+  <section class="hero" id="top">
+    <p class="eyebrow rise" style="animation-delay:.05s" data-pt="desenvolvedor fullstack" data-en="fullstack developer">desenvolvedor fullstack <span class="blink"></span></p>
+    <h1 class="hero-typewriter" aria-label="Riquelme Campos — FullStack Developer">
+      <pre class="hero-code" aria-hidden="true"><code id="heroTypeText"></code><span class="hero-type-cursor">▌</span></pre>
+    </h1>
+    <div class="cta-row rise" style="animation-delay:.4s">
+      <a href="projetos.html" class="btn btn-primary" data-pt="Ver projetos" data-en="View projects">Ver projetos</a>
+      <a href="contato.html" class="btn btn-ghost" data-pt="Falar comigo" data-en="Get in touch">Falar comigo</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="reveal">
+    <p class="eyebrow" data-pt="sobre-mim" data-en="about-me">sobre-mim</p>
+    <hr class="line">
+    <div class="sobre-layout">
+
+      <div class="sobre-left">
+        <div class="foto-frame">
+          <img src="assets/eu.jpg" alt="Riquelme Campos" class="sobre-foto">
+          <span class="foto-corners" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="sobre-right">
+        <p class="about-text">
+          <span data-lang="pt">Sou estudante do 8º período de <strong>Sistemas de Informação</strong> na UFVJM e formado como <strong>Técnico em Informática</strong> pelo IFNMG. Desde que entrei na tecnologia, encontrei no desenvolvimento de software a oportunidade de transformar ideias em soluções que resolvem problemas reais.</span>
+          <span data-lang="en" hidden>I'm an 8th semester <strong>Information Systems</strong> student at UFVJM and a certified <strong>IT Technician</strong> from IFNMG. Since I started in tech, I found in software development the opportunity to turn ideas into real-world solutions.</span>
+        </p>
+        <p class="about-text">
+          <span data-lang="pt">Ao longo da minha trajetória, desenvolvi projetos que colocam em prática essa visão. O <strong>Alerta Urbano</strong> é uma plataforma colaborativa de mapeamento de riscos urbanos, construída em JavaScript puro com arquitetura modular, heatmap dinâmico via Leaflet.js, sistema de reputação de usuários e backend em Node.js com Prisma — aplicando padrões como Module Pattern, Observer e Facade em um problema social real. Também desenvolvi um <strong>Sistema de Gestão de Oficina Mecânica</strong> com foco em POO, além deste próprio portfólio, projetado com identidade visual e experiência de uso cuidadosas.</span>
+          <span data-lang="en" hidden>Throughout my journey I've built projects that put this vision into practice. <strong>Alerta Urbano</strong> is a collaborative urban risk mapping platform built in vanilla JavaScript with a modular architecture, dynamic heatmap via Leaflet.js, a user reputation system, and a Node.js + Prisma backend — applying Module Pattern, Observer and Facade patterns to a real social problem. I also built a <strong>Mechanic Shop Management System</strong> focused on OOP, and this very portfolio, designed with a strong visual identity and user experience in mind.</span>
+        </p>
+        <p class="about-text">
+          <span data-lang="pt">Tenho experiência com <strong>Java, Python, JavaScript, C++, MySQL</strong> e desenvolvimento web, e estou constantemente explorando novas tecnologias — de frameworks modernos a ferramentas de IA. Acredito que a melhor forma de aprender é construindo.</span>
+          <span data-lang="en" hidden>I have experience with <strong>Java, Python, JavaScript, C++, MySQL</strong> and web development, and I'm constantly exploring new technologies — from modern frameworks to AI tools. I believe the best way to learn is by building.</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="terminal-grid" id="infoTerminal">
+
+      <div class="info-terminal">
+        <p class="info-prompt"><span class="info-dollar">$</span> riquelme <span class="info-flag">--info</span></p>
+        <div class="info-lines">
+          <div class="info-line" style="--d:0s">
+            <span class="info-key" data-pt="curso" data-en="degree">curso</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val" data-pt="Sistemas de Informação" data-en="Information Systems">Sistemas de Informação</span>
+          </div>
+          <div class="info-line" style="--d:.12s">
+            <span class="info-key" data-pt="instituição" data-en="institution">instituição</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val">UFVJM</span>
+          </div>
+          <div class="info-line" style="--d:.24s">
+            <span class="info-key" data-pt="semestre" data-en="semester">semestre</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val" data-pt="8º período" data-en="8th semester">8º período</span>
+          </div>
+          <div class="info-line" style="--d:.36s">
+            <span class="info-key" data-pt="formação" data-en="background">formação</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val" data-pt="Téc. em Informática — IFNMG" data-en="IT Technician — IFNMG">Téc. em Informática — IFNMG</span>
+          </div>
+        </div>
+        <p class="info-return"><span class="info-key">return</span> <span class="info-ok">✓ ok</span></p>
+      </div>
+
+      <div class="info-terminal">
+        <p class="info-prompt"><span class="info-dollar">$</span> riquelme <span class="info-flag">--status</span></p>
+        <div class="info-lines">
+          <div class="info-line" style="--d:.08s">
+            <span class="info-key" data-pt="disponível" data-en="available">disponível</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val info-val--green" data-pt="sim" data-en="yes">sim</span>
+          </div>
+          <div class="info-line" style="--d:.2s">
+            <span class="info-key" data-pt="localização" data-en="location">localização</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val">Minas Gerais, BR</span>
+          </div>
+          <div class="info-line" style="--d:.32s">
+            <span class="info-key" data-pt="modo" data-en="mode">modo</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val" data-pt="estudando + construindo" data-en="studying + building">estudando + construindo</span>
+          </div>
+          <div class="info-line" style="--d:.44s">
+            <span class="info-key" data-pt="objetivo" data-en="goal">objetivo</span>
+            <span class="info-arrow">→</span>
+            <span class="info-val" data-pt="estágio / vaga júnior" data-en="internship / junior role">estágio / vaga júnior</span>
+          </div>
+        </div>
+        <p class="info-return"><span class="info-key">return</span> <span class="info-ok">✓ ok</span></p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="atualmente" class="reveal">
+    <p class="eyebrow" data-pt="atualmente" data-en="currently">atualmente</p>
+    <div class="now-rows">
+      <div class="now-row">
+        <span class="now-key" data-pt="estudando" data-en="studying">estudando</span>
+        <span class="now-vals">
+          <span>Angular</span><span class="now-sep">/</span>
+          <span>Docker</span><span class="now-sep">/</span>
+          <span>Spring Boot</span><span class="now-sep">/</span>
+          <span data-pt="Arquitetura de Software" data-en="Software Architecture">Arquitetura de Software</span>
+        </span>
+      </div>
+      <div class="now-row">
+        <span class="now-key" data-pt="construindo" data-en="building">construindo</span>
+        <span class="now-vals">
+          <span>Alerta Urbano</span><span class="now-sep">/</span>
+          <span data-pt="Este portfólio" data-en="This portfolio">Este portfólio</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo" class="reveal">
+    <p class="eyebrow" data-pt="como eu desenvolvo" data-en="how I work">como eu desenvolvo</p>
+    <hr class="line">
+    <div class="dev-process">
+      <div class="dev-step reveal">
+        <span class="dev-step-num">01</span>
+        <span class="dev-step-title" data-pt="Ideia" data-en="Idea">Ideia</span>
+        <p class="dev-step-desc" data-pt="Entendo o problema antes de pensar em código." data-en="I understand the problem before thinking about code.">Entendo o problema antes de pensar em código.</p>
+      </div>
+      <div class="dev-step reveal">
+        <span class="dev-step-num">02</span>
+        <span class="dev-step-title" data-pt="Planejamento" data-en="Planning">Planejamento</span>
+        <p class="dev-step-desc" data-pt="Desenho a arquitetura e escolho as tecnologias certas pra esse problema." data-en="I design the architecture and choose the right technologies for the problem.">Desenho a arquitetura e escolho as tecnologias certas pra esse problema.</p>
+      </div>
+      <div class="dev-step reveal">
+        <span class="dev-step-num">03</span>
+        <span class="dev-step-title" data-pt="Protótipo" data-en="Prototype">Protótipo</span>
+        <p class="dev-step-desc" data-pt="Construo uma versão mínima só para validar se a ideia funciona." data-en="I build a minimal version just to validate whether the idea works.">Construo uma versão mínima só para validar se a ideia funciona.</p>
+      </div>
+      <div class="dev-step reveal">
+        <span class="dev-step-num">04</span>
+        <span class="dev-step-title" data-pt="Desenvolvimento" data-en="Development">Desenvolvimento</span>
+        <p class="dev-step-desc" data-pt="Implemento com atenção a boas práticas, testando aos poucos." data-en="I implement with attention to best practices, testing as I go.">Implemento com atenção a boas práticas, testando aos poucos.</p>
+      </div>
+      <div class="dev-step reveal">
+        <span class="dev-step-num">05</span>
+        <span class="dev-step-title" data-pt="Testes" data-en="Testing">Testes</span>
+        <p class="dev-step-desc" data-pt="Verifico casos de borda e corrijo o que não se comporta como esperado." data-en="I check edge cases and fix anything that doesn't behave as expected.">Verifico casos de borda e corrijo o que não se comporta como esperado.</p>
+      </div>
+      <div class="dev-step reveal">
+        <span class="dev-step-num">06</span>
+        <span class="dev-step-title" data-pt="Deploy" data-en="Deploy">Deploy</span>
+        <p class="dev-step-desc" data-pt="Publico e acompanho o resultado na prática." data-en="I publish and monitor the result in practice.">Publico e acompanho o resultado na prática.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Riquelme Campos</span>
+    <a href="https://github.com/rickcamposs/Portfolio" target="_blank" rel="noopener" data-pt="código-fonte ↗" data-en="source code ↗">código-fonte ↗</a>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
 
 </html>

@@ -1,0 +1,152 @@
+:root {
+  --bg: #282a36;
+  --bg-alt: #21222c;
+  --border: #44475a;
+  --fg: #f8f8f2;
+  --comment: #6272a4;
+  --purple: #bd93f9;
+  --pink: #ff79c6;
+  --green: #50fa7b;
+  --cyan: #8be9fd;
+  --orange: #ffb86c;
+  --yellow: #f1fa8c;
+  --red: #ff5555;
+
+  --display: 'Space Grotesk', sans-serif;
+  --body: 'Inter', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  --maxw: 1080px;
+  --pad: clamp(24px, 6vw, 64px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--purple);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--pink);
+  outline-offset: 4px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 96px var(--pad);
+}
+
+@media (max-width:640px) {
+  section {
+    padding: 72px var(--pad);
+  }
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--comment);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.eyebrow::before {
+  content: "//";
+}
+
+.blink {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--pink);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+hr.line {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 40px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  opacity: 0;
+}
+
+body.intro-done .rise {
+  animation: riseIn .9s cubic-bezier(.16, .8, .24, 1) forwards;
+}

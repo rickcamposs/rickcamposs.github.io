@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('rc_theme');
+    if(!t){ t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; }
+    if(t === 'light'){ document.documentElement.setAttribute('data-theme','light'); }
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiência — Riquelme Campos</title>
+<meta name="description" content="Experiência profissional de Riquelme Campos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-mark">RC_</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">menu</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#top">início</a>
+      <a href="index.html#sobre">sobre</a>
+      <a href="index.html#skills">skills</a>
+      <a href="projetos.html">projetos</a>
+      <a href="experiencia.html" class="active">experiência</a>
+      <a href="contato.html">contato</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">tema</button>
+    </nav>
+  </div>
+</header>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+<section class="page-hero reveal">
+  <p class="eyebrow">experiência</p>
+  <h1>Por onde já passei</h1>
+  <p class="lead">Minha trajetória profissional até aqui.</p>
+</section>
+
+<section class="reveal">
+  <div class="row-list">
+    <a class="row" href="https://lp.staycloud.com.br/" target="_blank" rel="noopener">
+      <span class="row-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+      </span>
+      <span class="row-title">StayCloud</span>
+      <span class="row-desc">Suporte Técnico</span>
+      <span class="row-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Riquelme Campos</span>
+  <a href="https://github.com/rickcamposs/Portfolio" target="_blank" rel="noopener">código-fonte ↗</a>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>

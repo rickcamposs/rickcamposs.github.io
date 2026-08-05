@@ -1,0 +1,28 @@
+/* =========================================================
+   Riquelme Campos — Portfolio
+   Tema: Dracula (https://draculatheme.com)
+
+   Estrutura de arquivos:
+   css/
+   ├── style.css          ← este arquivo (apenas imports)
+   └── modules/
+       ├── _base.css          variáveis, reset, tipografia, animações
+       ├── _theme.css         tema claro + alternador
+       ├── _intro-cursor.css  tela de boot + cursor customizado
+       ├── _nav.css           navegação e menu mobile
+       ├── _hero.css          hero da home + page hero das subpáginas
+       ├── _about-skills.css  about, skills, dev-process, github stats
+       ├── _rows.css          componente de linha editorial (shared)
+       ├── _projects.css      acordeão de projetos
+       └── _ui.css            contact, footer, scroll progress, back-to-top
+   ========================================================= */
+
+@import url('./modules/_base.css');
+@import url('./modules/_theme.css');
+@import url('./modules/_intro-cursor.css');
+@import url('./modules/_nav.css');
+@import url('./modules/_hero.css');
+@import url('./modules/_about-skills.css');
+@import url('./modules/_rows.css');
+@import url('./modules/_projects.css');
+@import url('./modules/_ui.css');

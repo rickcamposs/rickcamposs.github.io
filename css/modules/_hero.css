@@ -1,0 +1,121 @@
+.hero {
+  padding-top: 160px;
+  padding-bottom: 40px;
+}
+
+.hero-typewriter {
+  margin: 14px 0 0;
+}
+
+.hero-code {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: clamp(15px, 2.4vw, 26px);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin: 0;
+  white-space: pre;
+  overflow-x: auto;
+  display: block;
+  min-height: calc(1.6em * 7);
+}
+
+.hero-code code { font-family: inherit; }
+
+.hero-type-cursor {
+  display: inline-block;
+  width: 0.55em;
+  color: var(--pink);
+  font-weight: 400;
+  animation: blink .85s steps(1) infinite;
+}
+.hero-type-cursor.done { animation: none; opacity: 0; }
+
+/* tokens de sintaxe */
+.ck-kw    { color: var(--purple); }
+.ck-tok   { color: var(--cyan); }
+.ck-prop  { color: var(--green); }
+.ck-str   { color: var(--yellow); }
+.ck-punct { color: var(--comment); }
+.ck-plain { color: var(--fg); }
+
+.hero .role {
+  font-family: var(--mono);
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: var(--comment);
+  margin-top: 22px;
+}
+
+.hero p.tagline {
+  margin-top: 18px;
+  max-width: 480px;
+  color: var(--comment);
+  font-size: 17px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 14px 22px;
+  border: 1px solid var(--border);
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: var(--bg);
+  border-color: var(--purple);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--purple);
+}
+
+.btn-ghost {
+  color: var(--fg);
+}
+
+.btn-ghost:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.statement {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(24px, 4.2vw, 38px);
+  line-height: 1.3;
+  color: var(--fg);
+  max-width: 760px;
+  border: none;
+}
+
+.page-hero {
+  padding-top: 160px;
+  padding-bottom: 24px;
+}
+
+.page-hero h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 72px);
+  text-transform: uppercase;
+  color: var(--fg);
+  line-height: 1;
+}
+
+.page-hero p.lead {
+  color: var(--comment);
+  max-width: 540px;
+  margin-top: 16px;
+  font-size: 16px;
+}

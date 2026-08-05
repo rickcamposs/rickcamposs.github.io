@@ -1,0 +1,210 @@
+/* ---------- nav ---------- */
+header.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  isolation: isolate;
+}
+
+/* o blur fica num pseudo-elemento para o header NÃO virar containing
+   block dos filhos com position:fixed (backdrop-filter cria um novo
+   containing block e "prendia" o botão de idioma dentro do header) */
+header.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(33, 34, 44, 0.82);
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 18px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-mark {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--pink);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-mark-short {
+  transition: opacity .3s ease, max-width .4s ease;
+  max-width: 60px;
+  opacity: 1;
+}
+
+.nav-mark-full {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity .35s ease, max-width .4s ease;
+}
+
+.nav-mark-name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--fg);
+  letter-spacing: 0;
+}
+
+.nav-mark-role {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--comment);
+  letter-spacing: 0;
+}
+
+header.nav.scrolled .nav-mark-short { opacity: 0; max-width: 0; }
+header.nav.scrolled .nav-mark-full  { opacity: 1; max-width: 220px; }
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--comment);
+}
+
+.nav-links a {
+  position: relative;
+  padding: 4px 0;
+  transition: color .2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--pink);
+  transition: width .25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--fg);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--pink);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+@media (max-width:720px) {
+  .nav-links {
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg-alt);
+    border-bottom: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 320px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links a {
+    padding: 16px var(--pad);
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  /* no mobile mantém só RC_, sem a animação de expansão */
+  .nav-mark-full { display: none; }
+  header.nav.scrolled .nav-mark-short { opacity: 1; max-width: 60px; }
+
+  .nav-links .theme-toggle {
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 16px var(--pad);
+  }
+}
+
+/* ---------- botão de idioma ---------- */
+.lang-toggle {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--comment);
+  padding: 5px 9px;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.lang-toggle:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+/* visível mesmo no mobile sem acordeão */
+@media (max-width: 720px) {
+  .lang-toggle {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 200;
+    background: var(--bg-alt);
+    border-color: var(--border);
+  }
+}
+
+/* quando inglês está ativo, destaca em ciano */
+[data-lang="en"] .lang-toggle {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
