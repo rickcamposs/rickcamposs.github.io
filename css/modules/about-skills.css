@@ -426,11 +426,13 @@
   cursor: default;
   transition: color .2s ease, transform .2s ease;
   display: inline-block;
+  cursor: none;
 }
 
 .now-vals > span:not(.now-sep):hover {
   color: var(--cyan);
   transform: translateY(-2px);
+  cursor: none;
 }
 
 .now-sep {
